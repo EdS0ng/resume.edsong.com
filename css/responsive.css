@@ -1,0 +1,382 @@
+/*------------------------------------------------
+*
+*	Table of contents: 
+*	1. Screen resolution 480px+
+*	2. Screen resolution 768px+
+*	3. Screen resolution 992px+
+*	4. Screen resulution less than 991px
+*	5. Screen resolution less than 767px
+*	6. Screen resolution less than 479px
+*
+-------------------------------------------------*/
+
+/*-------------------------------------------------
+	1. Screen resolution 480+
+-------------------------------------------------*/
+@media only screen and (min-width: 480px) {
+	.resume-box div:first-child {
+		float: left;
+	}
+	.resume-box div:last-child {
+		-webkit-transform: translateY(-5px);
+		-moz-transform: translateY(-5px);
+		-ms-transform: translateY(-5px);
+		-o-transform: translateY(-5px);
+		transform: translateY(-5px);
+		min-height: 95px;
+		padding-left: 150px;
+	}
+}
+
+/*-------------------------------------------------
+	2. Screen resolution 768px+
+-------------------------------------------------*/
+@media only screen and (min-width: 768px) {
+	section, 
+	footer {
+		padding: 0 50px 50px 50px;
+	}
+	.fill {
+		padding: 50px;
+	}
+	.container {
+		padding: 0 50px;
+	}
+	.menu {
+		height: 50px;
+	}
+	.toggle-btn {
+		display: none;
+	}
+	.menu .nav li {
+		display: inline-block;
+		margin: 0px;
+		padding: 13px 13px;
+	}
+	.aboutWrapper, 
+	.blog-page-content, 
+	.single-post, 
+	.testimonialWrapper, 
+	.contact-form {
+		padding-right: 15px;
+	}
+	.skillsWrapper, 
+	.sidebar, 
+	#factsWrapper, 
+	.info {
+		padding-left: 15px;
+	}
+	.portfolio-background #masonryGrid, 
+	.blog-content {
+		margin: 0 -15px;
+	}
+	#blogPage, 
+	#blogSingle {
+		padding: 50px;
+	}
+	.blogWrapper h2, 
+	.portfolio-background h2 {
+		float: left;
+	}
+	.portfolio-background h2 {
+		margin-bottom: 35px;
+	}
+	.customNavigation, 
+	#button-group {
+		text-align: right;
+	}
+	.blog-background .owl-theme .owl-controls, 
+	.testimonialWrapper .owl-theme .owl-controls {
+		margin-top: 45px;
+	}
+	.image-hover {
+		top: 15px;
+		right: 15px;
+		bottom: 15px;
+		left: 15px;
+	}
+	.testimonial-background .black-layer {
+		padding-bottom: 85px;
+	}
+	#factsWrapper h2 {
+		margin-bottom: 35px;
+	}
+	.fact-box {
+		padding-right: 30px;
+	}
+}
+
+/*-------------------------------------------------
+	3. Screen resolution 992px+
+-------------------------------------------------*/
+@media only screen and (min-width: 992px) {
+	.aboutWrapper, 
+	.blog-page-content, 
+	.single-post, 
+	.testimonialWrapper, 
+	.educationWrapper, 
+	.contact-form {
+		padding-right: 25px;
+	}
+	.skillsWrapper, 
+	.sidebar, 
+	#factsWrapper, 
+	.employmentWrapper, 
+	.info {
+		padding-left: 25px;
+	}
+	.aboutWrapper img {
+		float: left;
+	}
+	.about-text {
+		padding-left: 220px;
+	}
+	.info li {
+		width: 33.3%;
+	}
+	.input-style {
+		float: left;
+		width: 50%;
+	}
+	.input-style:first-child {
+		padding-right: 20px;
+	}
+	.input-style:last-child {
+		padding-left: 20px;
+	}
+}
+
+/*-------------------------------------------------
+	4. Screen resolution less than 991px+
+-------------------------------------------------*/
+@media only screen and (max-width: 991px) {
+	.servicesWrapper {
+		margin: 0 -3px;
+	}
+	.image-box {
+		width: 50%;
+	}
+	.aboutWrapper {
+		text-align: center;
+	}
+	.aboutWrapper img {
+		display: inline-block;
+		margin-bottom: 15px;
+	}
+	.aboutWrapper p {
+		text-align: left;
+	}
+	.aboutWrapper .social {
+		text-align: center;
+	}
+	.educationWrapper {
+		margin-bottom: 25px;
+	}
+	.employmentWrapper {
+		margin-top: 25px;
+	}
+	.info li {
+		width: 100%;
+		margin-bottom: 20px;
+		padding: 0;
+	}
+	.input-style {
+		width: 100%;
+	}
+}
+
+/*-------------------------------------------------
+	5. Screen resolution less than 767px
+-------------------------------------------------*/
+@media only screen and (max-width: 767px) {
+	section, 
+	footer {
+		padding: 0 20px 20px 20px;
+	}
+	h1 {
+		font-size: 28px;
+	}
+	h2 {
+		display: table;
+		margin-left: auto;
+		margin-right: auto;
+		padding-right: 10px;
+		border-right: 3px double rgb(220, 220, 220);
+		text-align: center;
+	}
+	.go-top {
+		right: 20px;
+		bottom: 20px;
+	}
+	.fill {
+		padding: 20px;
+	}
+	.container {
+		padding: 0 20px;
+	}
+	.home-background, 
+	.testimonial-background {
+		background-attachment: scroll;
+		background-position: top center !important;
+	}
+	#blogPage, 
+	#blogSingle {
+		padding: 20px;
+	}
+	.customNavigation {
+		margin-bottom: 20px;
+		text-align: center;
+	}
+	.blog-content {
+		margin: 0 -10px;
+	}
+	.blog-background .owl-theme .owl-controls, 
+	.testimonialWrapper .owl-theme .owl-controls {
+		margin-top: 20px;
+	}
+	.menu {
+		-webkit-transform: translateY(-10px);
+		-moz-transform: translateY(-10px);
+		-ms-transform: translateY(-10px);
+		transform: translateY(-10px);
+		opacity: 0;
+		visibility: hidden;
+		height: 100%;
+		-webkit-transition: ease-out 0.3s;
+		-moz-transition: ease-out 0.3s;
+		-o-transition: ease-out 0.3s;
+		transition: ease-out 0.3s;
+	}
+	.show-menu {
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0);
+		opacity: 1;
+		visibility: visible;
+	}
+	.menu .nav {
+		position: relative;
+		top: 50%;
+		-webkit-transform: translate(0,-50%);
+		-moz-transform: translate(0,-50%);
+		-ms-transform: translate(0,-50%);
+		-o-transform: translate(0,-50%);
+		transform: translate(0,-50%);
+	}
+	.menu .nav li {
+		display: table;
+		margin: 0 auto 10px auto;
+	}
+	.menu .nav li:last-child {
+		margin-bottom: 0;
+	}
+	.testimonial-background h2 {
+		border-color: rgba(255, 255, 255, 0.3);
+	}
+	.aboutWrapper, 
+	.testimonialWrapper {
+		margin-bottom: 25px;
+	}
+	.skillsWrapper, 
+	#factsWrapper {
+		margin-top: 25px;
+	}
+	.blog-page-content, 
+	.single-post {
+		padding-right: 0;
+	}
+	.blog-title {
+		margin-bottom: 20px;
+		padding: 50px 20px;
+	}
+	.sidebar {
+		margin-top: 50px;
+	}
+	.post-content .owl-theme .owl-controls {
+		right: 5px;
+		bottom: 5px;
+	}
+	.post .owl-theme .owl-controls {
+		right: 5px;
+		bottom: 20px;
+	}
+	.box-content {
+		margin-bottom: 20px;
+	}
+	.tags {
+		margin-top: 15px;
+	}
+	.comments h4, 
+	.post-comment h4 {
+		margin-bottom: 20px;
+	}
+	.singleComment {
+		margin-bottom: 20px;
+	}
+	.replies li {
+		padding-top: 20px;
+	}
+	.portfolio-background ul {
+		margin-bottom: 10px;
+	}
+	.portfolio-background li {
+		margin-bottom: 10px;
+	}
+	.image-box {
+		width: 100%;
+		margin: 0 0 20px 0;
+		padding: 0;
+	}
+	.image-hover {
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+	.resume-box {
+		margin-bottom: 20px;
+	}
+	.replies {
+		margin: 0;
+	}
+	.blog-content, 
+	.centered-pills {
+		margin-bottom: 5px;
+	}
+	.post-box {
+		padding: 0 10px;
+	}
+	.fact-box {
+		margin-bottom: 20px;
+		padding: 0;
+	}
+	.fact-box:last-child {
+		margin: 0;
+	}
+	.contact-form {
+		padding-bottom: 50px;
+	}
+	.input-style {
+		margin-bottom: 10px;
+	}
+	.text-style {
+		margin-bottom: 10px;
+	}
+}
+
+/*-------------------------------------------------
+	6. Screen resolution less than 480px
+-------------------------------------------------*/
+@media only screen and (max-width: 479px) {
+	.services-background .owl-carousel .owl-item {
+		border: none;
+	}
+	.resume-box {
+		text-align: center;
+	}
+	.resume-box div:first-child {
+		display: inline-block;
+		margin-bottom: 10px;
+	}
+}

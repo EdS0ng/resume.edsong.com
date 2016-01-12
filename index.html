@@ -1,10 +1,469 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Website</title>
-</head>
-<body>
-  <h1>Edward's Website</h1>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Edward Song</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.png">
+    <!-- ===== STYLESHEETS ===== -->
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Magnific Popup -->
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <!-- Owl Carousel -->
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
+    <!-- Linea Icons -->
+    <link href="linea/styles.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Preloader styles -->
+    <link href="css/preloader.css" rel="stylesheet">
+    <!-- Main styles -->
+    <link href="css/styles.css" rel="stylesheet">
+    <!-- Responsive styles -->
+    <link href="css/responsive.css" rel="stylesheet">
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,300italic,300,500%7CPlayfair+Display:400,700,400italic' rel='stylesheet' type='text/css'>
+    <!--Angular-->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="loader-wrapper">
+      <div class="loader">
+        <div class="cube1"></div>
+        <div class="cube2"></div>
+      </div>
+    </div>
+    <!-- end Preloader -->
+
+    <!-- Go back to top -->
+    <div class="go-top">
+      <div><i class="fa fa-angle-up"></i></div>
+    </div>
+    <!-- end Go back to top -->
+
+    <header>
+      <!-- Toggle Menu -->
+      <button class="toggle-btn">
+        <span class="lines"></span>
+      </button>
+      <div class="menu">
+        <ul class="nav">
+          <li class="active">
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="http://eds0ng.github.io/">Blog</a>
+          </li>
+           <li>
+            <a href="#resume">Resume</a>
+          </li>
+          <li>
+            <a href="#portfolio">Portfolio</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <!-- end Toggle menu -->
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="fill">
+      <div class="home-background parallax-section">
+        <div class="black-layer">
+          <div class="middle-content">
+            <h1>Edward Song</h1>
+            <span>Full Stack Javascript Developer</span>
+          </div>
+          <div class="arrow-down">
+            <a href="#about">
+              <i class="fa fa-angle-down"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end Home Section -->
+
+    <!-- About / Skills section -->
+    <section id="about">
+      <div class="about-background">
+        <div class="container">
+          <h2>About Me</h2>
+          <div class="row">
+            <div class="aboutWrapper col-xs-12 col-sm-6">
+              <img src="images/ed_song_-5.jpg" alt="">
+              <div class="about-text">
+                <h3>Full Stack Developer</h3>
+                <p>I'm a Chemical engineer turned developer. I decided to pursue my interest in code post graduation and attended a coding bootcamp in the Bay Area. There I learned Javascript and full stack development. In addition, I also learned Android mobile development by myself. I love programming and want to learn as much about computer science as I can.</p>
+                <div class="social">
+                  <ul>
+                    <li>
+                      <a href="https://twitter.com/Ed_S0nG"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li>
+                      <a href="https://www.linkedin.com/in/edward-song-35451592"><i class="fa fa-linkedin"></i></a>
+                    </li>
+                    <li>
+                      <a href="https://github.com/EdS0ng"><i class="fa fa-github"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="skillsWrapper col-xs-12 col-sm-6">
+              <ui-view></ui-view>
+            </div>
+          </div><!-- end row -->
+        </div><!-- end container -->
+      </div>
+      <!-- Skill Categories -->
+      <div class="services-background">
+        <div class="container" ng-controller="aboutCtrl">
+          <div class="row">
+            <div class="servicesWrapper">
+              <div id="servicesSlider">
+                <!-- Service box 1 -->
+                <div class="service-box" ng-click="front()">
+                  <i class="icon icon-basic-webpage-img-txt"></i>
+                  <p>Front-End Web Stack</p>
+                </div>
+                <div class="service-box" ng-click="back()">
+                  <i id="largeIcon"class="fa fa-server"></i>
+                  <p>Back-End Web Stack</p>
+                </div>
+                <div class="service-box" ng-click="mobile()">
+                  <i id="largeIcon"class="fa fa-mobile"></i>
+                  <p>Mobile Stack</p>
+                </div>
+                <div class="service-box" ng-click="database()">
+                  <i id="largeIcon"class="fa fa-database"></i>
+                  <p>Databases</p>
+                </div>
+                <div class="service-box" ng-click="other()">
+                  <i id="largeIcon"class="fa fa-code"></i>
+                  <p>Other Skills</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- end row -->
+        </div><!-- end container -->
+      </div><!-- end Services -->
+    </section>
+    <!-- end About Section -->
+
+    <!-- Resume Section -->
+    <section id="resume">
+      <div class="resume-background">
+        <div class="container">
+          <h2>Resume</h2>
+          <div class="row">
+            <!-- Education -->
+            <div class="educationWrapper col-xs-12 col-md-6">
+              <div class="resume-box">
+                <div>
+                  <ul>
+                    <li><i class="icon icon-basic-book"></i></li>
+                    <li>2015 - Current</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Web Development</h4>
+                  <span>Coding House</span>
+                  <p>3-1/2 month live in bootcamp focused on hands-on experience with full stack web development and team projects.</p>
+                </div>
+              </div>
+              <!-- education box 2 -->
+              <div class="resume-box">
+                <div>
+                  <ul>
+                    <li><i class="icon icon-basic-book"></i></li>
+                    <li>2011 - 2015</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>B.S Chemical Engineering</h4>
+                  <span>Rice University</span>
+                  <p>Graduated in May, 2015 with a minor in Business.</p>
+                </div>
+              </div>
+            </div>
+            <!-- end Education -->
+            <!-- Employment -->
+            <div class="employmentWrapper col-xs-12 col-md-6">
+              <!-- employment box 1 -->
+              <div class="resume-box">
+                <div>
+                  <ul>
+                    <li><i class="icon icon-basic-case"></i></li>
+                    <li>2015 - present</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Freelance Developer</h4>
+                  <span></span>
+                  <p></p>
+                </div>
+              </div>
+              <!-- employment box 2 -->
+              <div class="resume-box">
+                <div>
+                  <ul>
+                    <li><i class="icon icon-basic-case"></i></li>
+                    <li>2014 - 2014</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>IT Intern</h4>
+                  <span>ArzTech</span>
+                  <p>Set up the general company IT infrastructure by setting up a cloud based data server and automating data backup and syncs among company computers.</p>
+                </div>
+              </div>
+            </div>
+            <!-- end Employment -->
+          </div><!-- end row -->
+        </div><!-- end container -->
+      </div>
+    </section>
+    <!-- end Resume Section -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+      <div class="portfolio-background">
+        <div class="container">
+          <div>
+            <h2>Portfolio</h2>
+            <ul id="button-group">
+              <li class="active" data-filter="*">All</li>
+              <li data-filter=".category-1">Front End</li>
+              <li data-filter=".category-2">Full Stack</li>
+            </ul>
+          </div>
+          <!-- clearfix --><div class="clearfix"></div><!-- end clearfix -->
+          <div id="masonryGrid">
+            <!-- Image 1 -->
+            <div class="image-box category-1">
+              <img src="images/Youtube_Music_Streaming_small.png" alt="">
+              <div class="image-hover">
+                <a class="lightbox" href="#popup-1">
+                  <div>
+                    <h3>Youtube Music Streaming</h3>
+                    <span>Ionic</span>
+                  </div>
+                </a>
+              </div>
+              <!-- popup content -->
+              <div id="popup-1" class="mfp-hide popup-box">
+                <img src="images/Youtube_Music_Streaming.png" alt="">
+                <div>
+                  <h3>Youtube Music Streaming</h3>
+                  <p>Live stream music from Youtube onto a mobile hybrid app for free. Save bandwidth by streaming audio only and run the app in the background, without buying Youtube Red. This app is made with the Ionic Framework and AngularJS. The server utilizes ffmpeg and ytdl-core to download and format the data stream.</p>
+                  <a href="https://github.com/EdS0ng/Ionic-YoutubeMusicPlayer">See Source Code</a>
+                </div>
+              </div>
+              <!-- end popup content -->
+            </div>
+            <!-- Image 2 -->
+            <div class="image-box category-2">
+              <img src="images/demo-img.jpg" alt="">
+              <div class="image-hover">
+                <a class="lightbox" href="#popup-2">
+                  <div>
+                    <h3>Project Title</h3>
+                    <span>Angular</span>
+                  </div>
+                </a>
+              </div>
+              <!-- popup content -->
+              <div id="popup-2" class="mfp-hide popup-box">
+                <img src="images/demo-img.jpg" alt="">
+                <div>
+                  <h3>Project Title</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla consequat massa quis enim.</p>
+                </div>
+              </div>
+              <!-- end popup content -->
+            </div>
+            <!-- Image 3 -->
+            <div class="image-box category-1">
+              <img src="images/demo-img.jpg" alt="">
+              <div class="image-hover">
+                <a class="lightbox" href="#popup-3">
+                  <div>
+                    <h3>Project Title</h3>
+                    <span>React</span>
+                  </div>
+                </a>
+              </div>
+              <!-- popup content -->
+              <div id="popup-3" class="mfp-hide popup-box">
+                <img src="images/demo-img.jpg" alt="">
+                <div>
+                  <h3>Project Title</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla consequat massa quis enim.</p>
+                </div>
+              </div>
+              <!-- end popup content -->
+            </div>
+            <!-- Image 4 -->
+            <div class="image-box category-2">
+              <img src="images/demo-img.jpg" alt="">
+              <div class="image-hover">
+                <a class="lightbox" href="#popup-4">
+                  <div>
+                    <h3>Project Title</h3>
+                    <span>Angular</span>
+                  </div>
+                </a>
+              </div>
+              <!-- popup content -->
+              <div id="popup-4" class="mfp-hide popup-box">
+                <img src="images/demo-img.jpg" alt="">
+                <div>
+                  <h3>Project Title</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla consequat massa quis enim.</p>
+                </div>
+              </div>
+              <!-- end popup content -->
+            </div>
+            <!-- Image 5 -->
+            <div class="image-box category-1">
+              <img src="images/demo-img.jpg" alt="">
+              <div class="image-hover">
+                <a class="lightbox" href="#popup-5">
+                  <div>
+                    <h3>Project Title</h3>
+                    <span>Java</span>
+                  </div>
+                </a>
+              </div>
+              <!-- popup content -->
+              <div id="popup-5" class="mfp-hide popup-box">
+                <img src="images/demo-img.jpg" alt="">
+                <div>
+                  <h3>Project Title</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla consequat massa quis enim.</p>
+                </div>
+              </div>
+              <!-- end popup content -->
+            </div>
+            <!-- end Image 5 -->
+          </div>
+        </div><!-- end container -->
+      </div>
+    </section>
+    <!-- end Portfolio Section -->
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="contact-background">
+        <div class="container">
+          <h2>Get In Touch</h2>
+          <div class="row">
+            <div class="contact-form col-xs-12 col-sm-6">
+              <form method="post" id="contactform">
+                <div class="input-style">
+                  <input type="text" id="name" name="name" placeholder="Name">
+                </div>
+                <div class="input-style">
+                  <input type="email" id="email" name="email" placeholder="E-Mail">
+                </div>
+                <div class="text-style">
+                  <textarea name="message" id="message" placeholder="Message"></textarea>
+                </div>
+                <input type="submit" id="submit" class="submit-style" name="submit" value="Send Message">
+                <div class="submit-result">
+                  <p id="success">Your Message has been sent!</p>
+                  <p id="error">Something went wrong, go back and try again!</p>
+                </div>
+              </form>
+            </div>
+            <div class="info col-xs-12 col-sm-6">
+              <div>
+                <p>I'm currently in the market for a development job. Please feel free to contact me regarding any possible openings you may have. I'm open to any sort of software development job, not just web development. Thanks for visiting!</p>
+              </div>
+              <ul>
+                <li>
+                  <h3>Address</h3>
+                  <p>349 Harvard Common, Fremont CA, 94539</p>
+                </li>
+                <li>
+                  <h3>Phone</h3>
+                  <p>+(714) 925 0868</p>
+                </li>
+                <li>
+                  <h3>Email</h3>
+                  <p>EdS0ng@Outlook.com</p>
+                </li>
+              </ul>
+            </div>
+          </div><!-- end row -->
+        </div><!-- end container -->
+      </div>
+    </section>
+    <!-- end Contact Section -->
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-background">
+        <div class="container">
+          <ul>
+            <li>
+              <a href="https://twitter.com/Ed_S0nG">Twitter</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/edward-song-35451592">Linkedin</a>
+            </li>
+            <li>
+              <a href="https://github.com/EdS0ng">Github</a>
+            </li>
+            <li>
+              <a href="http://eds0ng.github.io/">Blog</a>
+            </li>
+          </ul>
+        </div><!-- end container -->
+      </div>
+    </footer>
+    <!-- end Footer -->
+
+    <!-- ===== JAVASCRIPTS ===== -->
+    <!-- jQuery Library -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- Retina Graphics -->
+    <script src="js/retina.min.js"></script>
+    <!-- Smooth Scroll -->
+    <script src="js/smoothscroll.min.js"></script>
+    <!-- ImagesLoaded -->
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <!-- Isotope -->
+    <script src="js/isotope.pkgd.min.js"></script>
+    <!-- Theme Plugins -->
+    <script src="js/theme-plugins.js"></script>
+    <!-- Custom Scripts -->
+    <script src="app/app.js"></script>
+    <script src="app/routes/routes.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
 </html>
