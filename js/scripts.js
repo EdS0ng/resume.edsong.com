@@ -224,20 +224,17 @@ $(function() {
       $("#message").css('background-color','rgba(255, 0, 0, 0.1)');
     }
     else {
-      $.ajax({
-        url:'contact_form.php',
-        data:$(this).serialize(),
-        type:'POST',
-        success:function(data){
+      emailjs.send("default_service","website",{name: name, email: email, message:message})
+      .then(function(data){
           $("#success").show().fadeIn(1000); //=== Show Success Message==
           $('#contactform').each(function(){
             this.reset();
           });
-        },
-        error:function(data){
-          $("#error").show().fadeIn(1000); //===Show Error Message====
-        }
-      });
+          setTimeout($("#success").hide(), 2000);
+        },function(err){
+          $("#error").show().fadeIn(1000);
+          setTimeout($("#error").hide(), 2000) //===Show Error Message====
+        });
     }
     e.preventDefault();
   });
